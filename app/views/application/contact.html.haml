@@ -1,0 +1,30 @@
+%p.lead
+  Want a custom audition or project quote?
+  %br
+  Let's talk!
+
+= form_tag submit_contact_path, method: :post, class: 'form-horizontal' do
+  - if params[:action] == 'submit_contact' and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
+    .alert.alert-danger Please fill in all fields.
+
+  .form-group
+    .col-sm-3
+      NAME
+    .col-sm-9
+      = text_field_tag :name, params[:name], class: 'form-control', placeholder: 'Name'
+
+  .form-group
+    .col-sm-3
+      EMAIL
+    .col-sm-9
+      = email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Email'
+
+  .form-group
+    .col-sm-3
+      MESSAGE
+    .col-sm-9
+      = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 10
+
+  .form-group
+    .col-sm-12
+      = submit_tag 'Send Message', class: 'btn btn-primary'

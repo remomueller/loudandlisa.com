@@ -3,6 +3,7 @@
 ### Enhancements
 - **General Changes**
   - Setup rails web app and testing framework
+  - Added home, demos, services, and contact placeholders
   - Added OpenSans font family
   - Added Loud and Lisa favicon
 - **Gem Changes**

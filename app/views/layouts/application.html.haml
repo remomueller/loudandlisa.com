@@ -22,4 +22,12 @@
     = javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';"
   %body
     .container
+      = render 'layouts/header'
+    .container
+      = render 'layouts/menu'
+
+    .container
       = yield
+
+    .container
+      = render 'layouts/representation'
