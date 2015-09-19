@@ -4,7 +4,7 @@
   width: 100%;
   color: white !important;
   background-color: $brand-primary !important;
-  -webkit-transition: all .4s ease; /* Fade to color for Chrome and Safari */
+  -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
   -webkit-backface-visibility: hidden; /* Fix for transition flickering */
   box-shadow: 2px 2px 4px #888888;
 }
