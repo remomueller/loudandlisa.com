@@ -9,3 +9,4 @@
   - Setup framework for website design and components
 - **Gem Changes**
   - Updated to rails 4.2.4
+  - Updated to pg 0.18.3
