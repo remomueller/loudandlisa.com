@@ -7,6 +7,7 @@
   - Added OpenSans font family
   - Added Loud and Lisa favicon
   - Setup framework for website design and components
+  - Added turbolinks transitions
 - **Gem Changes**
   - Updated to rails 4.2.4
   - Updated to pg 0.18.3
