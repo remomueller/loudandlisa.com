@@ -1,0 +1,16 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+html, body {
+  overflow-x: hidden;
+}
+body {
+  background-color: $brand-primary;
+  margin-bottom: $footer-height;
+}
+
+.main-content {
+  background-color: white;
+  padding-bottom: 40px;
+}

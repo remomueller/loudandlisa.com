@@ -1,10 +1,10 @@
 !!!
 %html
   %head
-    %meta{ charset: 'utf-8'}
-    %meta{ content: 'IE=Edge,chrome=1', http: {equiv: 'X-UA-Compatible'}}
-    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{ name: "description", content: "Loud and Lisa" }
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'IE=Edge,chrome=1', http: { equiv: 'X-UA-Compatible' } }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %meta{ name: "description", content: "Loud and Lisa Creative Services" }
     %meta{ name: "author", content: "" }
 
     %title Loud and Lisa
@@ -20,14 +20,20 @@
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';"
-  %body
-    .container
+  %body.light-texture
+    .container.header-content
       = render 'layouts/header'
-    .container
+    .container.menu-content
       = render 'layouts/menu'
 
-    .container
-      = yield
+    .container.main-content
+      .row
+        .col-sm-6
+          .highlights
+            = yield
+        .col-sm-6.hidden-xs
+          = render 'layouts/right_image'
 
-    .container
-      = render 'layouts/representation'
+    .footer-container
+      .container
+        .footer= render 'layouts/representation'

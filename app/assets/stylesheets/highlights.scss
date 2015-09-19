@@ -1,0 +1,22 @@
+.highlights {
+  padding: 10px;
+  p, ul {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  .highlights {
+    p, ul {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .highlights {
+    padding: 30px;
+  }
+}

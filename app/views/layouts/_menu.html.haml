@@ -1,5 +1,5 @@
-%div{ style: 'border-top: 1px solid #ededed;border-bottom: 1px solid #ededed;padding:10px' }
-  = link_to 'HOME', root_path
-  = link_to 'DEMOS', demos_path
-  = link_to 'SERVICES', services_path
-  = link_to 'CONTACT', contact_path
+%ul.menu-horizontal
+  %li= link_to 'HOME', root_path, class: "#{'active' if current_page?(root_path)}"
+  %li= link_to 'DEMOS', demos_path, class: "#{'active' if current_page?(demos_path)}"
+  %li= link_to 'SERVICES', services_path, class: "#{'active' if current_page?(services_path)}"
+  %li= link_to 'CONTACT', contact_path, class: "#{'active' if current_page?(contact_path)}"

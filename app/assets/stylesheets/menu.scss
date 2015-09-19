@@ -1,0 +1,53 @@
+.menu-content {
+  background-color: white;
+}
+
+ul.menu-horizontal {
+  list-style: none;
+  float: left;
+  margin: 0;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  li {
+    margin-right: -2px;
+    position: relative;
+    display: block;
+    float: left;
+    a, a:visited {
+      font-weight: 300;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+      color: white;
+      background-color: $brand-primary;
+      -webkit-transition: all .4s ease; /* Fade to color for Chrome and Safari */
+      -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+    }
+    a:hover, a:focus, a:active, a.active {
+      text-decoration: none;
+      color: white;
+      background-color: $link-hover-color;
+      box-shadow: 2px 0px 10px #888888;
+      outline-color: $link-hover-color;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  ul.menu-horizontal {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: -15px;
+    li {
+      a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+  }
+}

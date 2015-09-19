@@ -1,0 +1,21 @@
+.btn-call-to-action {
+  min-width: 200px;
+  max-width: 500px;
+  width: 100%;
+  color: white !important;
+  background-color: $brand-primary !important;
+  -webkit-transition: all .4s ease; /* Fade to color for Chrome and Safari */
+  -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+  box-shadow: 2px 2px 4px #888888;
+}
+
+.btn-call-to-action:hover,
+.btn-call-to-action:focus,
+.btn-call-to-action:active,
+.btn-call-to-action.active,
+.btn-call-to-action.disabled,
+.btn-call-to-action[disabled] {
+  color: white !important;
+  background-color: $link-hover-color !important;
+  outline-color: $link-hover-color;
+}

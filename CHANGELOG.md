@@ -6,5 +6,6 @@
   - Added home, demos, services, and contact placeholders
   - Added OpenSans font family
   - Added Loud and Lisa favicon
+  - Setup framework for website design and components
 - **Gem Changes**
   - Updated to rails 4.2.4

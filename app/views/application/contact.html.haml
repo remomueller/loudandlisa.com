@@ -1,4 +1,4 @@
-%p.lead
+%p
   Want a custom audition or project quote?
   %br
   Let's talk!
@@ -17,8 +17,6 @@
 
   .form-group
     .col-sm-12
-      = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 10
+      = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 6
 
-  .form-group
-    .col-sm-12
-      = submit_tag 'Send Message', class: 'btn btn-primary'
+  = submit_tag 'Send Message', class: 'btn btn-call-to-action'
