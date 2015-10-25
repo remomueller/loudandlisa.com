@@ -1,30 +1,31 @@
-.right-image-container {
-  margin-top: -209px;
-  margin-right: -15px;
-}
+// .right-image-container {
+//   margin-right: -15px;
+//   margin-top: -209px;
+// }
 
-.right-image {
-  min-height: 702px;
-  background-image: asset-url('lisa-moore-right-column.png');
-  background-repeat: no-repeat;
-  background-position: right;
-}
+// .right-image {
+//   // background-image: asset-url('lisa-moore-right-column.png');
+//   background-image: asset-url('headshots/lisa-home-01.png');
+//   background-position: right;
+//   background-repeat: no-repeat;
+//   min-height: 702px;
+// }
 
-@media screen and (min-width: $screen-sm-min) {
-  .right-image-container {
-    margin-top: -248px;
-  }
-}
+// @media screen and (min-width: $screen-sm-min) {
+//   .right-image-container {
+//     margin-top: -248px;
+//   }
+// }
 
-@media screen and (min-width: $screen-md-min) {
-  .right-image-container {
-    margin-top: -285px;
-  }
-}
+// @media screen and (min-width: $screen-md-min) {
+//   .right-image-container {
+//     margin-top: -285px;
+//   }
+// }
 
 
-@media screen and (min-width: $screen-lg-min) {
-  .right-image-container {
-    margin-top: -299px;
-  }
-}
+// @media screen and (min-width: $screen-lg-min) {
+//   .right-image-container {
+//     margin-top: -299px;
+//   }
+// }

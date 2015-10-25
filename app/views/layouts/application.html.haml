@@ -17,22 +17,11 @@
       %script{ src: "//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" }
       %script{ src: "//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" }
 
-    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = stylesheet_link_tag 'application', media: 'all', data: { turbolinks_track: true }
+    = javascript_include_tag 'application', data: { turbolinks_track: true }
     = javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';"
   %body.light-texture
-    .container.header-content
-      = render 'layouts/header'
-    .container.menu-content
-      = render 'layouts/menu'
-
-    .container.main-content
-      .row
-        .col-sm-6
-          .highlights
-            = yield
-        .col-sm-6.hidden-xs
-          = render 'layouts/right_image'
+    = yield
 
     .footer-container
       .container

@@ -1,12 +1,49 @@
+// .btn-call-to-action {
+//   min-width: 200px;
+//   max-width: 500px;
+//   width: 100%;
+//   color: white !important;
+//   background-color: $brand-primary !important;
+//   -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
+//   -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+//   box-shadow: 2px 2px 4px #888888;
+// }
+
+// .btn-call-to-action:hover,
+// .btn-call-to-action:focus,
+// .btn-call-to-action:active,
+// .btn-call-to-action.active,
+// .btn-call-to-action.disabled,
+// .btn-call-to-action[disabled] {
+//   color: white !important;
+//   background-color: $link-hover-color !important;
+//   outline-color: $link-hover-color;
+// }
+
+
+.call-to-action {
+  background-color: $white; // brand-primary;
+  // color: $white;
+  background-image: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  .call-to-action {
+    margin: 0 -15px;
+  }
+}
+
 .btn-call-to-action {
-  min-width: 200px;
-  max-width: 500px;
   width: 100%;
-  color: white !important;
+  color: $white !important;
+  border-color: $white !important;
   background-color: $brand-primary !important;
-  -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
-  -webkit-backface-visibility: hidden; /* Fix for transition flickering */
-  box-shadow: 2px 2px 4px #888888;
+  transition: all .4s ease;
+  -webkit-backface-visibility: hidden;
 }
 
 .btn-call-to-action:hover,
@@ -15,7 +52,7 @@
 .btn-call-to-action.active,
 .btn-call-to-action.disabled,
 .btn-call-to-action[disabled] {
-  color: white !important;
-  background-color: $link-hover-color !important;
-  outline-color: $link-hover-color;
+  color: $brand-primary !important;
+  background-color: $white !important;
+  border-color: $brand-primary !important;
 }

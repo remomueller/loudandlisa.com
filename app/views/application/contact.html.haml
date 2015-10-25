@@ -1,22 +1,32 @@
-%p
-  Want a custom audition or project quote?
-  %br
-  Let's talk!
+%div{ style: 'margin-top: 20px' }
+  .container{ style: 'background-color:white' }
+    .row
+      .col-sm-5.hidden-xs
+        = image_tag 'headshots/lisa-contact-01.png', style: 'width:100%'
 
-= form_tag submit_contact_path, method: :post, class: 'form-horizontal' do
-  - if params[:action] == 'submit_contact' and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
-    .alert.alert-danger Please fill in all fields.
+      .col-sm-7
+        .header-logo{ style: 'text-align:center;margin-top:20px;margin-bottom:30px' }
+          = image_tag 'loud-and-lisa-logo.png'
+        = render 'layouts/menu'
+        %p
+          Want a custom audition or project quote?
+          %br
+          Let's talk!
 
-  .form-group
-    .col-sm-12
-      = text_field_tag :name, params[:name], class: 'form-control', placeholder: 'Name'
+        = form_tag submit_contact_path, method: :post, class: 'form-horizontal' do
+          - if params[:action] == 'submit_contact' and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
+            .alert.alert-danger Please fill in all fields.
 
-  .form-group
-    .col-sm-12
-      = email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Email'
+          .form-group
+            .col-sm-12
+              = text_field_tag :name, params[:name], class: 'form-control', placeholder: 'Name'
 
-  .form-group
-    .col-sm-12
-      = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 6
+          .form-group
+            .col-sm-12
+              = email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Email'
 
-  = submit_tag 'Send Message', class: 'btn btn-call-to-action'
+          .form-group
+            .col-sm-12
+              = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 6
+
+          = submit_tag 'Send Message', class: 'btn btn-call-to-action'

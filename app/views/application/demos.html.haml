@@ -1,6 +1,13 @@
-%p
-  2015 Voiceover Video Showreel
 
-%div{ style: 'border: 1px solid black' }
-  %h1.center
-    %span.glyphicon.glyphicon-play
+%div{ style: 'margin-top: 20px' }
+  .container{ style: 'background-color:white' }
+    .row
+      .col-sm-5.hidden-xs
+        = image_tag 'headshots/lisa-demo-01.png', style: 'width:100%'
+      .col-sm-7
+        .header-logo{ style: 'text-align:center;margin-top:20px;margin-bottom:30px' }
+          = image_tag 'loud-and-lisa-logo.png'
+        = render 'layouts/menu'
+
+        .embed-responsive.embed-responsive-16by9
+          %iframe.embed-responsive-item{ src: 'https://www.youtube.com/embed/jtQ4mtNuCVI', webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true }

@@ -1,5 +1,13 @@
-%ul.menu-horizontal
+%ul.nav.nav-pills.nav-justified.menu-border{ style: 'margin-bottom: 20px' }
   %li= link_to 'HOME', root_path, class: "#{'active' if current_page?(root_path)}"
   %li= link_to 'DEMOS', demos_path, class: "#{'active' if current_page?(demos_path)}"
   %li= link_to 'SERVICES', services_path, class: "#{'active' if current_page?(services_path)}"
+  %li= link_to 'CLIENTS', '#'
   %li= link_to 'CONTACT', contact_path, class: "#{'active' if current_page?(contact_path)}"
+
+- if false
+  %ul.menu-horizontal
+    %li= link_to 'HOME', root_path, class: "#{'active' if current_page?(root_path)}"
+    %li= link_to 'DEMOS', demos_path, class: "#{'active' if current_page?(demos_path)}"
+    %li= link_to 'SERVICES', services_path, class: "#{'active' if current_page?(services_path)}"
+    %li= link_to 'CONTACT', contact_path, class: "#{'active' if current_page?(contact_path)}"

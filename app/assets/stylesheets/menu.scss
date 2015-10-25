@@ -1,10 +1,16 @@
+.menu-border {
+  border-top: 1px solid $brand-primary;
+  border-bottom: 1px solid $brand-primary;
+  font-size: 14px;
+}
+
+
 .menu-content {
   background-color: white;
 }
 
 ul.menu-horizontal {
   list-style: none;
-  float: left;
   margin: 0;
   display: inline-block;
   padding-top: 10px;
@@ -15,6 +21,7 @@ ul.menu-horizontal {
     position: relative;
     display: block;
     float: left;
+
     a, a:visited {
       font-weight: 300;
       padding-top: 5px;
@@ -26,12 +33,16 @@ ul.menu-horizontal {
       -webkit-transition: all .2s ease; /* Fade to color for Chrome and Safari */
       -webkit-backface-visibility: hidden; /* Fix for transition flickering */
     }
-    a:hover, a:focus, a:active, a.active {
-      text-decoration: none;
-      color: white;
+
+    a.active,
+    a:active,
+    a:focus,
+    a:hover {
       background-color: $link-hover-color;
       box-shadow: 2px 0px 10px #888888;
+      color: white;
       outline-color: $link-hover-color;
+      text-decoration: none;
     }
   }
 }
@@ -40,7 +51,7 @@ ul.menu-horizontal {
   ul.menu-horizontal {
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-left: -15px;
+    // margin-left: -15px;
     li {
       a {
         padding-top: 10px;

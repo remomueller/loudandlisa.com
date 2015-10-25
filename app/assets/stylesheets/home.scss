@@ -1,0 +1,19 @@
+.voice-qualities {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  .voice-qualities {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+
+@media screen and (min-width: $screen-md-min) {
+  .voice-qualities {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+}
