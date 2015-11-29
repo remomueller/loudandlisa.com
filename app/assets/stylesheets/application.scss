@@ -1,20 +1,12 @@
-@import 'variables';
+// Bootstrap and general variable definitions
+@import 'variables/all';
 
+// Core Bootstrap styles
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-@import 'fonts';
+// App specific styles
+@import 'components/all';
 
-@import 'components/alignment';
-@import 'components/headings';
-@import 'components/action';
-@import 'components/textures';
-@import 'components/turbolinks';
-
-@import 'header';
-@import 'menu';
-@import 'body';
 @import 'highlights';
-@import 'images';
-@import 'footer';
 @import 'home';

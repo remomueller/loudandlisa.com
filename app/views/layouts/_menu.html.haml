@@ -5,14 +5,8 @@
     = link_to 'DEMOS', demos_path
   %li{ class: "#{'active' if current_page?(services_path)}" }
     = link_to 'SERVICES', services_path
-  %li{ class: "#{'active' if false}" }
-    = link_to 'CLIENTS', '#'
+  - if false
+    %li{ class: "#{'active' if false}" }
+      = link_to 'CLIENTS', '#'
   %li{ class: "#{'active' if current_page?(contact_path)}" }
     = link_to 'CONTACT', contact_path
-
-- if false
-  %ul.menu-horizontal
-    %li= link_to 'HOME', root_path, class: "#{'active' if current_page?(root_path)}"
-    %li= link_to 'DEMOS', demos_path, class: "#{'active' if current_page?(demos_path)}"
-    %li= link_to 'SERVICES', services_path, class: "#{'active' if current_page?(services_path)}"
-    %li= link_to 'CONTACT', contact_path, class: "#{'active' if current_page?(contact_path)}"

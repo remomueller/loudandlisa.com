@@ -1,27 +1,28 @@
 %div{ style: 'margin-top: 20px' }
   .container{ style: 'background-color:white' }
     .row
-      .col-sm-5.hidden-xs
-        = image_tag 'headshots/lisa-services-01.png', style: 'width:100%'
+      .col-sm-5.hidden-xs{ style: 'padding-right: 0' }
+        = image_tag 'headshots/lisa-services-02.jpg', style: 'width:100%'
       .col-sm-7
-        .header-logo{ style: 'text-align:center;margin-top:20px;margin-bottom:30px' }
-          = image_tag 'loud-and-lisa-logo.png'
-        = render 'layouts/menu'
+        .added-right-margin
+          .header-logo{ style: 'text-align:center;margin-top:20px;margin-bottom:30px' }
+            = image_tag 'loud-and-lisa-logo.png'
+          = render 'layouts/menu'
 
-        %p
-          commercials, e-learning, web, audiobooks...
+          %p
+            commercials, e-learning, web, audiobooks...
 
-        %p
-          LOUD and LISA offers:
-          %ul
-            %li HOME STUDIO
-            %li FLEXIBLE RATES
-            %li 48 HOUR TURNAROUND
-            %li AUDIO EDITING
-            %li COPYWRITING ASSISTANCE
-            %li PRODUCTION CONSULTATION
+          %p
+            LOUD and LISA offers:
+            %ul
+              %li HOME STUDIO
+              %li FLEXIBLE RATES
+              %li 48 HOUR TURNAROUND
+              %li AUDIO EDITING
+              %li COPYWRITING ASSISTANCE
+              %li PRODUCTION CONSULTATION
 
 
-        %div.call-to-action
-          %div{ style: 'text-align:center;margin-top:20px;margin-bottom:20px' }
-            = link_to 'GET A QUOTE TODAY', contact_path, class: 'btn btn-lg btn-call-to-action'
+          %div.call-to-action
+            %div{ style: 'text-align:center;margin-top:20px;margin-bottom:20px' }
+              = link_to 'GET A QUOTE TODAY', contact_path, class: 'btn btn-lg btn-call-to-action'
