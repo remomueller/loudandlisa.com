@@ -17,3 +17,8 @@
   @include tile-texture;
   background-image: asset-url('textures/symphony.png');
 }
+
+.background-texture {
+  @include tile-texture;
+  background-image: asset-url('textures/lisabackgroundmed_purple.jpg');
+}

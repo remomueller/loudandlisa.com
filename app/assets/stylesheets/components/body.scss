@@ -2,12 +2,11 @@ html {
   position: relative;
   min-height: 100%;
 }
-html, body {
-  overflow-x: hidden;
-}
+
 body {
   background-color: $brand-primary;
-  margin-bottom: $footer-height;
+  // margin-bottom: $footer-height;
+  margin-bottom: 20px;
 }
 
 .main-content {
