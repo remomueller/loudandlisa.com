@@ -42,6 +42,21 @@ ratings:
 # You can globally exclude files from being analyzed by any engine using the
 # exclude_paths key.
 
-#exclude_paths:
-#- spec/**/*
-#- vendor/**/*
+exclude_paths:
+- app/assets/fonts/**/*
+- app/assets/images/**/*
+- app/assets/javascripts/external/**/*
+- bin/**/*
+- config/**/*
+- db/**/*
+- lib/**/*
+- public/**/*
+- test/**/*
+- vendor/**/*
+- ".codeclimate.yml"
+- "CHANGELOG.md"
+- "config.ru"
+- COPYRIGHT
+- Gemfile
+- Rakefile
+- "README.md"
