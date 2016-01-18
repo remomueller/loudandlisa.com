@@ -1,46 +1,44 @@
-%div{ style: 'margin-top: 20px' }
-  .container{ style: 'background-color:white' }
-    .row
-      .col-sm-5.hidden-xs{ style: 'padding-right: 0' }
-        = image_tag 'headshots/lisa-home-03.jpg', style: 'width:100%'
+.row
+  .col-sm-5.hidden-xs{ style: 'padding-right: 0' }
+    = image_tag 'headshots/lisa-home-03.jpg', style: 'width:100%'
 
-      .col-sm-7
-        .added-right-margin
-          .header-logo.center{ style: 'margin-top: 20px;margin-bottom: 30px' }
-            = image_tag 'loud-and-lisa-logo.png'
-          = render 'layouts/menu'
-          %div
-            %p
-              Lisa Moore is a professional voiceover artist performing with passion
-              and personality.
+  .col-sm-7
+    .added-right-margin
+      .hidden-sm.hidden-md= render 'layouts/menu'
 
-          %div.voice-qualities
-            %p.center{ style: 'font-style: italic;'}
-              FUN - PEPPY - FLIRTY - WARM - ALL AMERICAN - DYNAMIC
+      %div
+        %p
+          Lisa Moore is a professional voiceover artist performing with passion
+          and personality. Working across all media platforms, she offers a full
+          range of services and a versatile sound.
 
-          .row
-            .col-lg-3
-              %p.nowrap Commercial Demo
-            .col-lg-9
-              %audio{ controls: '', style: 'width:100%' }
-                %source{ src: 'assets/lisa-moore-vo-demo.mp3', type: 'audio/mpeg' }
-                Your browser does not support the audio element.
-          .row
-            .col-lg-3
-              %p.nowrap Narration Sample
-            .col-lg-9
-              %audio{ controls: '', style: 'width:100%' }
-                %source{ src: 'assets/lisa-moore-vo-demo.mp3', type: 'audio/mpeg' }
-                Your browser does not support the audio element.
-          .row
-            .col-lg-3
-              %p.nowrap Character Sample
-            .col-lg-9
-              %audio{ controls: '', style: 'width:100%' }
-                %source{ src: 'assets/lisa-moore-vo-demo.mp3', type: 'audio/mpeg' }
-                Your browser does not support the audio element.
+      %div.voice-qualities
+        %p.center.nowrap{ style: 'font-style: italic;'}
+          DYNAMIC &middot; FLIRTY &middot; WARM &middot; NATURAL &middot; ALL AMERICAN
 
-          %div.call-to-action
-            %div{ style: 'text-align:center;margin-top:20px;margin-bottom:20px' }
-              = link_to "Let's Work Together", contact_path, class: 'btn btn-lg btn-call-to-action'
+      .row
+        .col-lg-3{ style: 'margin-bottom: 5px' }
+          .nowrap Commercial Demo
+        .col-lg-9{ style: 'margin-bottom: 10px' }
+          %audio{ controls: '', style: 'width:100%' }
+            %source{ src: 'assets/lisa-moore-vo-demo.mp3', type: 'audio/mpeg' }
+            Your browser does not support the audio element.
+      .row
+        .col-lg-3{ style: 'margin-bottom: 5px' }
+          .nowrap Narration Sample
+        .col-lg-9{ style: 'margin-bottom: 10px' }
+          %audio{ controls: '', style: 'width:100%' }
+            %source{ src: 'assets/lisa-moore-vo-demo.mp3', type: 'audio/mpeg' }
+            Your browser does not support the audio element.
+      .row
+        .col-lg-3{ style: 'margin-bottom: 5px' }
+          .nowrap Character Sample
+        .col-lg-9{ style: 'margin-bottom: 10px' }
+          %audio{ controls: '', style: 'width:100%' }
+            %source{ src: 'assets/lisa-moore-vo-demo.mp3', type: 'audio/mpeg' }
+            Your browser does not support the audio element.
+
+      %div.call-to-action
+        .button-spacing
+          = link_to "Let's Work Together", contact_path, class: 'btn btn-lg btn-call-to-action'
 

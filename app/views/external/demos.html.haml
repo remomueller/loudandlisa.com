@@ -1,14 +1,9 @@
+.row
+  .col-sm-5.hidden-xs{ style: 'padding-right: 0' }
+    = image_tag 'headshots/lisa-demo-02.jpg', style: 'width:100%'
+  .col-sm-7
+    .added-right-margin
+      .hidden-sm.hidden-md= render 'layouts/menu'
 
-%div{ style: 'margin-top: 20px' }
-  .container{ style: 'background-color:white' }
-    .row
-      .col-sm-5.hidden-xs{ style: 'padding-right: 0' }
-        = image_tag 'headshots/lisa-demo-02.jpg', style: 'width:100%'
-      .col-sm-7
-        .added-right-margin
-          .header-logo{ style: 'text-align:center;margin-top:20px;margin-bottom:30px' }
-            = image_tag 'loud-and-lisa-logo.png'
-          = render 'layouts/menu'
-
-          .embed-responsive.embed-responsive-16by9
-            %iframe.embed-responsive-item{ src: 'https://www.youtube.com/embed/jtQ4mtNuCVI', webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true }
+      .embed-responsive.embed-responsive-16by9
+        %iframe.embed-responsive-item{ src: 'https://www.youtube.com/embed/jtQ4mtNuCVI', webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true }
