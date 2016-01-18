@@ -3,29 +3,28 @@
     = image_tag 'headshots/lisa-home-03.jpg', style: 'width:100%'
 
   .col-sm-7
-    .added-right-margin
-      .hidden-sm.hidden-md= render 'layouts/menu'
+    .hidden-sm.hidden-md= render 'layouts/menu'
 
-      .home-1-text
-        %p
-          Want a custom audition or project quote?
-          %br
-          Let's talk!
+    .home-1-text
+      %p
+        Want a custom audition or project quote?
+        %br
+        Let's talk!
 
-      = form_tag submit_contact_path, method: :post, class: 'form-horizontal' do
-        - if params[:action] == 'submit_contact' and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
-          .alert.alert-danger Please fill in all fields.
+    = form_tag submit_contact_path, method: :post, class: 'form-horizontal' do
+      - if params[:action] == 'submit_contact' and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
+        .alert.alert-danger Please fill in all fields.
 
-        .form-group
-          .col-sm-12
-            = text_field_tag :name, params[:name], class: 'form-control', placeholder: 'Name'
+      .form-group
+        .col-sm-12
+          = text_field_tag :name, params[:name], class: 'form-control', placeholder: 'Name'
 
-        .form-group
-          .col-sm-12
-            = email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Email'
+      .form-group
+        .col-sm-12
+          = email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Email'
 
-        .form-group
-          .col-sm-12
-            = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 6
+      .form-group
+        .col-sm-12
+          = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 6
 
-        = submit_tag 'Send Message', class: 'btn btn-call-to-action'
+      = submit_tag 'Send Message', class: 'btn btn-call-to-action'
