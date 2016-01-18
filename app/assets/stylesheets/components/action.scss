@@ -10,7 +10,13 @@
 
 @media screen and (min-width: $screen-sm-min) {
   .call-to-action {
-    margin: 0 -15px;
+    // margin: 0 -15px;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .call-to-action {
+    margin: 0 40px;
   }
 }
 

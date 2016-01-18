@@ -6,10 +6,11 @@
     .added-right-margin
       .hidden-sm.hidden-md= render 'layouts/menu'
 
-      %p
-        Want a custom audition or project quote?
-        %br
-        Let's talk!
+      .home-1-text
+        %p
+          Want a custom audition or project quote?
+          %br
+          Let's talk!
 
       = form_tag submit_contact_path, method: :post, class: 'form-horizontal' do
         - if params[:action] == 'submit_contact' and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
