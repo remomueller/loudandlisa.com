@@ -10,6 +10,7 @@
   - Added turbolinks transitions
   - Added pictures for home, demos, and services
 - **Gem Changes**
+  - Updated to ruby 2.3.0
   - Updated to rails 4.2.5
   - Updated to pg 0.18.4
   - Updated to jquery-rails 4.1.0
