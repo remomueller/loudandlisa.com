@@ -10,6 +10,7 @@
   - Added turbolinks transitions
   - Added pictures for home, demos, and services
   - Set up contact page form
+  - Added Google Analytics
 - **Gem Changes**
   - Updated to ruby 2.3.0
   - Updated to rails 4.2.5
