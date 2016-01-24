@@ -9,6 +9,7 @@
   - Setup framework for website design and components
   - Added turbolinks transitions
   - Added pictures for home, demos, and services
+  - Set up contact page form
 - **Gem Changes**
   - Updated to ruby 2.3.0
   - Updated to rails 4.2.5
