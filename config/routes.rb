@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     get :version
   end
 
+  get 'voiceovers', to: redirect('')
+
   root 'external#home'
 end
