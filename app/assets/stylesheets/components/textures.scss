@@ -20,5 +20,5 @@
 
 .background-texture {
   @include tile-texture;
-  background-image: asset-url('textures/lisabackgroundmed_purple.jpg');
+  background-image: asset-url('textures/lisabackgroundmed_purple_progressive.jpg');
 }
