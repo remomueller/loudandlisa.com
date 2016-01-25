@@ -4,5 +4,10 @@
   .col-xs-12.col-lg-7
     .hidden-sm.hidden-md= render 'layouts/menu'
 
-    .embed-responsive.embed-responsive-16by9{ style: 'margin-bottom: 20px' }
+    .embed-responsive.embed-responsive-16by9{ style: 'margin-bottom: 5px' }
       %iframe.embed-responsive-item{ src: 'https://www.youtube.com/embed/jtQ4mtNuCVI', webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true }
+
+    %div.call-to-action
+      .center
+        = link_to contact_path, class: 'btn btn-lg btn-call-to-action' do
+          Start a Project

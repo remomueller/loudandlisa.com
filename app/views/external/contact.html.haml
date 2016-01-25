@@ -6,7 +6,7 @@
     .hidden-sm.hidden-md= render 'layouts/menu'
 
     .home-1-text
-      %p
+      %p{ style: 'margin-bottom: 20px' }
         Want a custom audition or project quote?
         %br
         Let's talk!
@@ -27,4 +27,6 @@
         .col-sm-12
           = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 6
 
-      = submit_tag 'Send Message', class: 'btn btn-call-to-action'
+      %div.call-to-action
+        .center
+          = submit_tag 'Send Message', class: 'btn btn-lg btn-call-to-action'
