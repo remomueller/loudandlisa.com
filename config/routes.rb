@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get :contact
     post :submit_contact
     get :version
+    get :thanks
   end
 
   get 'voiceovers', to: redirect('')

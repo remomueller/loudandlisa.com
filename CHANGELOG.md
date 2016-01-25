@@ -10,6 +10,7 @@
   - Added turbolinks transitions
   - Added pictures for home, demos, and services
   - Set up contact page form
+  - Added a thank you page after contact form
   - Added Google Analytics
   - Added SEO keywords and description
 - **Gem Changes**

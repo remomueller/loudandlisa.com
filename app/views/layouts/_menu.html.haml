@@ -10,5 +10,5 @@
   - if false
     %li{ class: "#{'active' if false}" }
       = link_to 'CLIENTS', '#'
-  %li{ class: "#{'active' if current_page?(contact_path)}" }
+  %li{ class: "#{'active' if current_page?(contact_path) || current_page?(thanks_path)}" }
     = link_to 'CONTACT', contact_path

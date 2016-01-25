@@ -24,7 +24,7 @@ class ExternalControllerTest < ActionController::TestCase
 
   test 'should submit contact as public user' do
     post :submit_contact, name: 'Name', email: 'test@example.com', body: "Line 1\nLine 2"
-    assert_redirected_to contact_path
+    assert_redirected_to thanks_path
   end
 
   test 'should not submit contact as public user with missing fields' do

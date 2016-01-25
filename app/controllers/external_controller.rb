@@ -15,7 +15,7 @@ class ExternalController < ApplicationController
   def submit_contact
     if params[:name].present? && params[:email].present? && params[:body].present?
       UserMailer.contact(params[:name], params[:email], params[:body]).deliver_later if EMAILS_ENABLED
-      redirect_to contact_path, notice: 'Thanks for getting in touch!'
+      redirect_to thanks_path
     else
       render :contact
     end
