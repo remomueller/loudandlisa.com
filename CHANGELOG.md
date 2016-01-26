@@ -4,6 +4,7 @@
 - **General Changes**
   - Setup rails web app and testing framework
   - Added home, demos, services, and contact pages
+  - Added embedded video on demos page
   - Added OpenSans font family
   - Added Loud and Lisa favicon
   - Setup framework for website design and components
