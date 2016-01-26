@@ -1,5 +1,10 @@
-.hidden-sm= render 'layouts/menu'
+.row
+  .col-lg-5.hidden-xs.hidden-sm.hidden-md{ style: 'padding-right: 0' }
+    = image_tag 'headshots/lisa-demo.jpg', style: 'width:100%', alt: 'Lisa Moore - Demo'
+  .col-xs-12.col-lg-7
+    .hidden-sm.hidden-md= render 'layouts/menu'
 
-%h1 Version
-%p.center
-  %strong= WwwLoudandlisaCom::VERSION::STRING
+    .home-1-text
+      %p.lead.center
+        Version
+        = WwwLoudandlisaCom::VERSION::STRING
