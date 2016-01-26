@@ -18,10 +18,12 @@ ga "create", "<%= ENV['google_analytics'] %>", "auto"
 ga "require", "displayfeatures"
 
 $(document).ready ->
+  console.log 'Document Ready (GA)'
   if typeof Turbolinks is 'undefined' or !Turbolinks.supported
     ga "send", 'pageview'
     return
 
 $(document).on "page:change", ->
+  console.log 'PAGE CHANGE (GA)'
   ga "send", "pageview", window.location.pathname
   return
