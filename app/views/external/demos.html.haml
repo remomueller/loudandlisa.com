@@ -1,3 +1,5 @@
+- video_id = 'MaSp-a839ys'
+
 .row
   .col-lg-5.hidden-xs.hidden-sm.hidden-md{ style: 'padding-right: 0' }
     = image_tag 'headshots/lisa-demo.jpg', style: 'width:100%', alt: 'Lisa Moore - Demo'
@@ -5,7 +7,7 @@
     .hidden-sm.hidden-md= render 'layouts/menu'
 
     .embed-responsive.embed-responsive-16by9{ style: 'margin-bottom: 5px' }
-      %iframe.embed-responsive-item{ src: 'https://www.youtube.com/embed/WU1l3nMuiZM?rel=0&modestbranding=1&autohide=1&showinfo=0&wmode=opaque', webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true }
+      %iframe.embed-responsive-item{ src: "https://www.youtube.com/embed/#{video_id}?rel=0&modestbranding=1&autohide=1&showinfo=0&wmode=opaque", webkitallowfullscreen: true, mozallowfullscreen: true, allowfullscreen: true }
 
     %div.call-to-action
       .center
