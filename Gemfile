@@ -10,7 +10,7 @@ gem 'devise',               '~> 3.5.1'
 gem 'haml'
 gem 'figaro',               '~> 1.1.1'
 gem 'bootstrap-sass',       '~> 3.3.5'
-gem 'carrierwave',          '~> 0.10.0'
+gem 'carrierwave',          '~> 0.11.0'
 gem 'kaminari',             '~> 0.16.3'
 
 # Rails Defaults
