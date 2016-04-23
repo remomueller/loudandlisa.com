@@ -21,3 +21,4 @@
   - Updated to jquery-rails 4.1.0
   - Updated to simplecov 0.11.1
   - Updated to carrierwave 0.11.0
+  - Updated to devise 4.0.0
