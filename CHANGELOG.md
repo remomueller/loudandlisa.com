@@ -16,7 +16,7 @@
   - Added SEO keywords and description
 - **Gem Changes**
   - Updated to ruby 2.3.0
-  - Updated to rails 4.2.5.1
+  - Updated to rails 4.2.6
   - Updated to pg 0.18.4
   - Updated to jquery-rails 4.1.0
   - Updated to simplecov 0.11.1
