@@ -1,4 +1,6 @@
-# Handles all public facing pages
+# frozen_string_literal: true
+
+# Handles all public facing pages.
 class ExternalController < ApplicationController
   def contact
   end
@@ -14,7 +16,7 @@ class ExternalController < ApplicationController
 
   def submit_contact
     if params[:name].present? && params[:email].present? && params[:body].present?
-      UserMailer.contact(params[:name], params[:email], params[:body]).deliver_later if EMAILS_ENABLED
+      UserMailer.contact(params[:name], params[:email], params[:body]).deliver_now if EMAILS_ENABLED
       redirect_to thanks_path
     else
       render :contact

@@ -1,5 +1,5 @@
-@ready = () ->
-  Turbolinks.enableProgressBar()
+@ready = ->
+  false
 
 $(document).ready(ready)
 $(document)

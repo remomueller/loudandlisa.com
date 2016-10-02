@@ -7,7 +7,8 @@
     %meta{ name: 'description', content: 'Lisa Moore is a professional voiceover artist performing with passion and personality based near Boston and New York city. Lisa Moore specializes in web commercials, direct response, narration, animation, jingles and explainer videos.' }
     %meta{ name: 'author', content: 'Lisa Moore, Loud and Lisa Creative Services' }
     %meta{ name: 'keywords', content: 'voice-over artist, female voiceover artist, voice artist, voice actor, voice talent, VO talent, home studio, female, professional, web commercials, narration, jingles, direct response, explainer videos, warm voice, all american, dynamic voice, natural voice, flirty voice, fast turnaround, MP3, narrator, eLearning, digital file delivery, flexible non-union rates, affordable voice over service, cheap voice over service, no accent, character voices, female announcer, broadcast quality, commercial demo reel, Boston, NYC, New York City' }
-
+    -# Don't cache any pages
+    %meta{ name: 'turbolinks-cache-control', content: 'no-cache' }
     %title Loud and Lisa Creative Services - Lisa Moore - Female Voiceover Artist
 
     = favicon_link_tag 'loudandlisa.ico'
@@ -18,9 +19,9 @@
       %script{ src: "//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" }
       %script{ src: "//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js" }
 
-    = stylesheet_link_tag 'application', media: 'all', data: { turbolinks_track: true }
-    = javascript_include_tag 'application', data: { turbolinks_track: true }
-    = javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';"
+    = stylesheet_link_tag 'application', media: 'all', data: { turbolinks_track: 'reload' }
+    = javascript_include_tag 'application', data: { turbolinks_track: 'reload' }
+    = javascript_tag "var root_url='#{request.script_name + '/'}';"
   %body.background-texture
     %div{ style: 'margin-top: 20px' }
       .container{ style: 'background-color:white' }

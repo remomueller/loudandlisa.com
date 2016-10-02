@@ -1,5 +1,16 @@
 ## 2.0.0
 
+### Enhancements
+- **Gem Changes**
+  - Updated to ruby 2.3.1
+  - Updated to rails 5.0.0.1
+  - Updated to pg 0.19.0
+  - Updated to devise 4.2.0
+  - Updated to bootstrap-sass 3.3.7
+  - Updated to kaminari 0.17.0
+  - Updated to carrierwave 0.11.2
+  - Updated to turbolinks 5
+
 ## 1.0.0 (April 23, 2016)
 
 ### Enhancements
