@@ -1,6 +1,8 @@
 ## 3.0.0
 
 ### Enhancements
+- **General Changes**
+  - Login cookies are now cross subdomain and work between www and non-www URLs
 - **Gem Changes**
   - Updated to ruby 2.4.1
   - Updated to devise 4.3.0
