@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'external#home'
+  root "external#home"
 
   scope module: :external do
     get :demos
@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     get :thanks
   end
 
-  get 'voiceovers', to: redirect('')
+  get "voiceovers", to: redirect("")
 end

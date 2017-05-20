@@ -2,18 +2,23 @@
 
 # Handles all public facing pages.
 class ExternalController < ApplicationController
-  def contact
-  end
+  # # GET /contact
+  # def contact
+  # end
 
-  def demos
-  end
+  # # GET /demos
+  # def demos
+  # end
 
-  def home
-  end
+  # # GET /home
+  # def home
+  # end
 
-  def services
-  end
+  # # GET /services
+  # def services
+  # end
 
+  # POST /submit_contact
   def submit_contact
     if params[:name].present? && params[:email].present? && params[:body].present?
       UserMailer.contact(params[:name], params[:email], params[:body]).deliver_now if EMAILS_ENABLED
@@ -23,6 +28,8 @@ class ExternalController < ApplicationController
     end
   end
 
-  def version
-  end
+  # # GET /version
+  # # GET /version.json
+  # def version
+  # end
 end
