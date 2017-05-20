@@ -6,6 +6,7 @@
   - Updated to devise 4.3.0
   - Updated to carrierwave 1.1.0
   - Updated to haml 5.0.1
+  - Updated to jquery-rails 4.3.1
 
 ## 2.0.0 (October 10, 2016)
 
