@@ -4,6 +4,7 @@
 - **Gem Changes**
   - Updated to ruby 2.4.1
   - Updated to devise 4.3.0
+  - Updated to carrierwave 1.1.0
 
 ## 2.0.0 (October 10, 2016)
 
