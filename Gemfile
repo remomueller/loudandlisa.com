@@ -8,6 +8,7 @@ gem "rails",                "5.0.0.1"
 gem "pg",                   "0.19.0"
 
 # Gems used by project
+gem "autoprefixer-rails"
 gem "bootstrap-sass",       "~> 3.3.7"
 gem "carrierwave",          "~> 0.11.2"
 gem "devise",               "~> 4.2.0"
