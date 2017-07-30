@@ -1,5 +1,8 @@
 ## 3.1.0
 
+- **Gem Changes**
+  - Updated to rails 5.1.2
+
 ## 3.0.0 (May 20, 2017)
 
 ### Enhancements
