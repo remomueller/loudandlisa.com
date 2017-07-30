@@ -2,6 +2,7 @@
 
 - **Gem Changes**
   - Updated to rails 5.1.2
+  - Updated to pg 0.21.0
 
 ## 3.0.0 (May 20, 2017)
 
