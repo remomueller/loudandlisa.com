@@ -1,5 +1,8 @@
 ## 3.1.0
 
+### Enhancements
+- **General Changes**
+  - Updated Lisa's name
 - **Gem Changes**
   - Updated to rails 5.1.2
   - Updated to pg 0.21.0
