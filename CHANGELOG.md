@@ -1,5 +1,9 @@
 ## 4.0.0
 
+### Enhancements
+- **Gem Changes**
+  - Update to ruby 2.6.3
+
 ## 3.1.0 (July 30, 2017)
 
 ### Enhancements
