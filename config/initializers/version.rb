@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module WwwLoudandlisaCom
+module LoudAndLisa
   module VERSION #:nodoc:
     MAJOR = 4
     MINOR = 0

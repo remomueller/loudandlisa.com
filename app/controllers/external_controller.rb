@@ -2,20 +2,21 @@
 
 # Handles all public facing pages.
 class ExternalController < ApplicationController
-  # # GET /contact
-  # def contact
-  # end
-
+  # # GET /
   # # GET /demos
   # def demos
   # end
 
-  # # GET /home
-  # def home
-  # end
-
   # # GET /services
   # def services
+  # end
+
+  # # GET /clients
+  # def clients
+  # end
+
+  # # GET /contact
+  # def contact
   # end
 
   # POST /submit_contact

@@ -1,6 +1,9 @@
 ## 4.0.0
 
 ### Enhancements
+- **General Changes**
+  - Remove Home page
+  - Add Clients page
 - **Gem Changes**
   - Update to ruby 2.6.3
   - Update to rails 6.0.0.beta3
