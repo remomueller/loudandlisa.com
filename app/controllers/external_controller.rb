@@ -11,9 +11,32 @@ class ExternalController < ApplicationController
   # def services
   # end
 
-  # # GET /clients
-  # def clients
-  # end
+  # GET /clients
+  def clients
+    @logos = %w(
+      aetna-logo.jpg
+      lingochamp-logo.jpg
+      audible-logo.jpg
+      1800-flowers-logo.jpg
+      campbells-logo.jpg
+      dunkin-logo.jpg
+      bose-logo.jpg
+      giant-eagle-logo.jpg
+      adore-me-logo.jpg
+      pearson-logo.jpg
+      national-grid-logo.jpg
+      fidelity-logo.jpg
+      johnson-and-johnson-logo.jpg
+      stride-rite-logo.jpg
+      thumbtack-logo.jpg
+      heluva-good-logo.jpg
+      acrolinx-logo.jpg
+      boston-childrens-hospital-logo.jpg
+      cocoon-logo.jpg
+      ymca-logo.jpg
+      embark-logo.jpg
+    )
+  end
 
   # # GET /contact
   # def contact

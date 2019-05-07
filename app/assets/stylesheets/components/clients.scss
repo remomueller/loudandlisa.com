@@ -1,0 +1,20 @@
+.client-logo {
+  display: inline;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  img {
+    max-width: 100%;
+    width: 96px;
+  }
+}
+
+.client-logo-last {
+  display: inline;
+}
+
+@media screen and (min-width: $screen-xs-min) {
+  .client-logo-last {
+    display: none;
+  }
+}

@@ -4,4 +4,7 @@
   .col-xs-12.col-lg-7
     .hidden-sm.hidden-md= render "layouts/menu"
 
-    Clients here.
+    .text-center{ style: "padding: 1rem 0;" }
+      - @logos.each_with_index do |logo, index|
+        .client-logo{ class: @logos.size - 1 == index ? "client-logo-last" : nil }
+          = image_tag "clients/#{logo}"
