@@ -3,6 +3,7 @@
 ### Enhancements
 - **Gem Changes**
   - Update to ruby 2.6.3
+  - Update to pg 1.1.4
   - Update to carrierwave 1.3.1
   - Update to devise 4.6.2
   - Update to haml 5.0.4
