@@ -9,11 +9,16 @@ require "rails/all"
 Bundler.require(*Rails.groups)
 
 module WwwLoudandlisaCom
+  # Application that hosts Loud and Lisa website.
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
+    config.load_defaults 6.0
 
     # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration can go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded after loading
+    # the framework and any gems in your application.
+
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
@@ -21,9 +26,7 @@ module WwwLoudandlisaCom
     # Run "rails time:zones" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = "Eastern Time (US & Canada)"
 
-    # Overwrite Rails errors to use Bootstrap CSS classes
-    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
-      "<span class=\"has-error\">#{html_tag}</span>".html_safe
-    end
+    # Ignores custom error DOM elements created by Rails.
+    config.action_view.field_error_proc = proc { |html_tag, _instance| html_tag }
   end
 end

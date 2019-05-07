@@ -34,7 +34,6 @@ class ExternalControllerTest < ActionController::TestCase
   test "should not submit contact as public user with missing fields" do
     post :submit_contact, params: { name: "", email: "", body: "" }
     assert_response :success
-    assert_template "contact"
   end
 
   test "should get version" do
