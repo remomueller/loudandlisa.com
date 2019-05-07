@@ -3,6 +3,7 @@
 ### Enhancements
 - **General Changes**
   - Remove Home page
+  - Update commercial sample mp3 on services page
   - Add Clients page
 - **Gem Changes**
   - Update to ruby 2.6.3
