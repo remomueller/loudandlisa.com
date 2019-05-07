@@ -1,19 +1,18 @@
 .row
-  .col-sm-5.hidden-xs{ style: 'padding-right: 0' }
-    = image_tag 'headshots/lisa-home.jpg', style: 'width:100%', alt: 'Lisa Mueller - Home'
+  .col-sm-5.hidden-xs{ style: "padding-right: 0" }
+    = image_tag "headshots/lisa-home.jpg", style: "width:100%", alt: "Lisa Mueller - Home"
 
   .col-sm-7
-    .hidden-sm.hidden-md= render 'layouts/menu'
+    .hidden-sm.hidden-md= render "layouts/menu"
 
     .home-1-text
       %p
-        Lisa Mueller is a professional voiceover artist performing with passion
-        and personality. She offers a full range of services and a versatile
+        Lisa Mueller is a professional voiceover artist offering a versatile
         sound for all media platforms.
 
     .home-2-text
       %div.voice-qualities
-        %p.center.nowrap{ style: 'font-style: italic;'}
+        %p.center.nowrap{ style: "font-style: italic;" }
           SMOOTH &middot; WARM &middot;
           %span.hidden-xs.hidden-sm
             ALL-AMERICAN &middot;
@@ -21,31 +20,31 @@
 
     .home-3-text.audio-bar-padding
       .row
-        .col-lg-3{ style: 'margin-bottom: 5px' }
+        .col-lg-3{ style: "margin-bottom: 5px" }
           .nowrap Commercial Demo
-        .col-lg-9{ style: 'margin-bottom: 10px' }
-          %audio{ controls: '', style: 'width:100%' }
-            %source{ src: asset_path('lisa-mueller-vo-demo.mp3'), type: 'audio/mpeg' }
+        .col-lg-9{ style: "margin-bottom: 10px" }
+          %audio{ controls: "", style: "width:100%" }
+            %source{ src: asset_path("lisa-mueller-vo-demo.mp3"), type: "audio/mpeg" }
             Your browser does not support the audio element.
       .row
-        .col-lg-3{ style: 'margin-bottom: 5px' }
+        .col-lg-3{ style: "margin-bottom: 5px" }
           .nowrap Narration Sample
-        .col-lg-9{ style: 'margin-bottom: 10px' }
-          %audio{ controls: '', style: 'width:100%' }
-            %source{ src: asset_path('lisa-mueller-narration-sample.mp3'), type: 'audio/mpeg' }
+        .col-lg-9{ style: "margin-bottom: 10px" }
+          %audio{ controls: "", style: "width:100%" }
+            %source{ src: asset_path("lisa-mueller-narration-sample.mp3"), type: "audio/mpeg" }
             Your browser does not support the audio element.
       .row
-        .col-lg-3{ style: 'margin-bottom: 5px' }
+        .col-lg-3{ style: "margin-bottom: 5px" }
           .nowrap Character Sample
-        .col-lg-9{ style: 'margin-bottom: 10px' }
-          %audio{ controls: '', style: 'width:100%' }
-            %source{ src: asset_path('lisa-mueller-character-sample.mp3'), type: 'audio/mpeg' }
+        .col-lg-9{ style: "margin-bottom: 10px" }
+          %audio{ controls: "", style: "width:100%" }
+            %source{ src: asset_path("lisa-mueller-character-sample.mp3"), type: "audio/mpeg" }
             Your browser does not support the audio element.
     .home-4-text
       %div.call-to-action
         .button-spacing
-          = link_to contact_path, class: 'btn btn-lg btn-call-to-action' do
+          = link_to contact_path, class: "btn btn-lg btn-call-to-action" do
             %span.hidden-xs
-              Let's Work Together
+              Let's work together
             %span.visible-xs
-              Let's Talk
+              Let's talk

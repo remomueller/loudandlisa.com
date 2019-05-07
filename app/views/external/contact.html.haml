@@ -1,32 +1,32 @@
 .row
-  .col-sm-5.hidden-xs{ style: 'padding-right: 0' }
-    = image_tag 'headshots/lisa-contact.jpg', style: 'width:100%', alt: 'Lisa Mueller - Contact'
+  .col-sm-5.hidden-xs{ style: "padding-right: 0" }
+    = image_tag "headshots/lisa-home.jpg", style: "width:100%", alt: "Lisa Mueller - Contact"
 
   .col-sm-7
-    .hidden-sm.hidden-md= render 'layouts/menu'
+    .hidden-sm.hidden-md= render "layouts/menu"
 
     .home-1-text
-      %p{ style: 'margin-bottom: 20px' }
+      %p{ style: "margin-bottom: 20px" }
         Want a custom audition or project quote?
         %br
         Let's talk!
 
-    = form_tag submit_contact_path, method: :post, class: 'form-horizontal' do
-      - if params[:action] == 'submit_contact' and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
+    = form_tag submit_contact_path, method: :post, class: "form-horizontal" do
+      - if params[:action] == "submit_contact" and (params[:name].blank? or params[:email].blank? or params[:body].blank?)
         .alert.alert-danger Please fill in all fields.
 
       .form-group
         .col-sm-12
-          = text_field_tag :name, params[:name], class: 'form-control', placeholder: 'Name'
+          = text_field_tag :name, params[:name], class: "form-control", placeholder: "Name"
 
       .form-group
         .col-sm-12
-          = email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Email'
+          = email_field_tag :email, params[:email], class: "form-control", placeholder: "Email"
 
       .form-group
         .col-sm-12
-          = text_area_tag :body, params[:body], class: 'form-control', placeholder: 'Message', rows: 6
+          = text_area_tag :body, params[:body], class: "form-control", placeholder: "Message", rows: 6
 
       %div.call-to-action
         .center
-          = submit_tag 'Send Message', class: 'btn btn-lg btn-call-to-action'
+          = submit_tag "Send message", class: "btn btn-lg btn-call-to-action"

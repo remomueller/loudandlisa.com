@@ -19,7 +19,7 @@ class ExternalController < ApplicationController
   # def contact
   # end
 
-  # POST /submit_contact
+  # POST /contact
   def submit_contact
     if params[:name].present? && params[:email].present? && params[:body].present?
       UserMailer.contact(params[:name], params[:email], params[:body]).deliver_now if EMAILS_ENABLED
