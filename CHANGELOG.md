@@ -5,6 +5,7 @@
   - Update to ruby 2.6.3
   - Update to carrierwave 1.3.1
   - Update to devise 4.6.2
+  - Update to haml 5.0.4
   - Update to simplecov 0.16.1
 
 ## 3.1.0 (July 30, 2017)
