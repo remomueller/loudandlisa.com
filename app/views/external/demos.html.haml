@@ -6,13 +6,12 @@
     .hidden-sm.hidden-md= render "layouts/menu"
 
     .home-1-text
-      %p
-        Lisa Mueller is a professional voiceover artist offering a versatile
-        sound for all media platforms.
+      Lisa Mueller is a professional voiceover artist offering a versatile
+      sound:
 
     .home-2-text
-      %div.voice-qualities
-        %p.center.nowrap{ style: "font-style: italic;" }
+      .voice-qualities
+        .nowrap{ style: "font-style: italic;font-weight: bold;" }
           SMOOTH &middot; WARM &middot;
           %span.hidden-xs.hidden-sm
             ALL-AMERICAN &middot;
@@ -26,6 +25,15 @@
           %audio{ controls: "", style: "width:100%" }
             %source{ src: asset_path("lisa-mueller-vo-demo.mp3"), type: "audio/mpeg" }
             Your browser does not support the audio element.
+
+      .row
+        .col-lg-3{ style: "margin-bottom: 5px" }
+          .nowrap Narration Sample
+        .col-lg-9{ style: "margin-bottom: 10px" }
+          %audio{ controls: "", style: "width:100%" }
+            %source{ src: asset_path("lisa-mueller-narration-sample.mp3"), type: "audio/mpeg" }
+            Your browser does not support the audio element.
+
       .row
         .col-lg-3{ style: "margin-bottom: 5px" }
           .nowrap Commercial Sample

@@ -3,7 +3,8 @@
 ### Enhancements
 - **General Changes**
   - Remove Home page
-  - Update commercial sample mp3 on services page
+  - Update commercial sample on demos page
+  - Add narration sample on demos page
   - Add Clients page
   - Add reCAPTCHA to contact page
 - **Gem Changes**
