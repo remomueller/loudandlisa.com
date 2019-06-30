@@ -5,6 +5,7 @@
   - Remove Home page
   - Update commercial sample mp3 on services page
   - Add Clients page
+  - Add reCAPTCHA to contact page
 - **Gem Changes**
   - Update to ruby 2.6.3
   - Update to rails 6.0.0.beta3

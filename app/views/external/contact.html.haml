@@ -29,4 +29,15 @@
 
       %div.call-to-action
         .center
-          = submit_tag "Send message", class: "btn btn-lg btn-call-to-action"
+          - if RECAPTCHA_ENABLED
+            %script{ src: "https://www.google.com/recaptcha/api.js?render=#{ENV["recaptcha_site_key"]}" }
+            = hidden_field_tag :recaptcha_token
+            :javascript
+              grecaptcha.ready(function() {
+                grecaptcha.execute("#{ENV["recaptcha_site_key"]}", {action: "contact"}).then(function(token) {
+                  document.getElementById("recaptcha_token").value = token;
+                });
+              });
+            = submit_tag "Send message", class: "btn btn-lg btn-call-to-action g-recaptcha"
+          - else
+            = submit_tag "Send message", class: "btn btn-lg btn-call-to-action"
