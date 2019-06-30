@@ -8,4 +8,4 @@
   %li{ class: "#{"active" if current_page?(clients_path)}" }
     = link_to "CLIENTS", clients_path
   %li{ class: "#{"active" if current_page?(contact_path) || current_page?(thanks_path)}" }
-    = link_to "CONTACT", contact_path
+    = link_to "CONTACT", contact_path, data: { turbolinks: false }

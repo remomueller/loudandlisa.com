@@ -33,6 +33,6 @@
     .home-4-text
       %div.call-to-action
         .center
-          = link_to contact_path, class: "btn btn-lg btn-call-to-action" do
+          = link_to contact_path, class: "btn btn-lg btn-call-to-action", data: { turbolinks: false } do
             Get a quote
             %span.hidden-xs today
