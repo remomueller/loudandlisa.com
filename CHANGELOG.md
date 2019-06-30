@@ -4,7 +4,7 @@
 - **General Changes**
   - Remove Home page
   - Update commercial sample on demos page
-  - Add narration sample on demos page
+  - Add testimonial sample on demos page
   - Add Clients page
   - Add reCAPTCHA to contact page
 - **Gem Changes**
