@@ -16,6 +16,6 @@ website_secret:       "<%= SecureRandom.hex(64) %>"
 
 google_analytics:  "<%= print "Google Analytics ID: "; gets.chomp %>"
 
-recaptcha_enabled:    "<%= print "Enable reCAPTCHA? (y|n)"; s = gets.chomp.downcase; response[0] == "y" ? "true" : "false" %>"
+recaptcha_enabled:    "<%= print "Enable reCAPTCHA? (y|n)"; s = gets.chomp.downcase; s[0] == "y" ? "true" : "false" %>"
 recaptcha_site_key:   "<%= print "Enter reCAPTCHA Site Key: "; gets.chomp %>"
 recaptcha_secret_key: "<%= print "Enter reCAPTCHA Secret Key: "; gets.chomp %>"
