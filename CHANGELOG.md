@@ -3,6 +3,7 @@
 ### Enhancements
 - **General Changes**
   - Remove Home page
+  - Update voiceover sample on demos page
   - Update commercial sample on demos page
   - Add testimonial sample on demos page
   - Add Clients page
