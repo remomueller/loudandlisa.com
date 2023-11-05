@@ -22,6 +22,7 @@ gem "coffee-rails",               "~> 5.0"
 gem "jbuilder",                   "~> 2.9"
 gem "jquery-rails",               ">= 4.4.0"
 gem "sass-rails",                 ">= 6"
+gem "sassc",                      "2.1.0"
 gem "turbolinks",                 "~> 5"
 gem "uglifier",                   ">= 1.3.0"
 
@@ -33,13 +34,6 @@ group :development do
 end
 
 # Testing
-group :test do
-  # Pretty printed test output
-  gem "minitest"
-  gem "rails-controller-testing"
-  gem "simplecov",                "~> 0.16.1", require: false
-end
-
 group :test do
   gem "capybara",                 ">= 2.15", "< 4.0"
   gem "minitest"
