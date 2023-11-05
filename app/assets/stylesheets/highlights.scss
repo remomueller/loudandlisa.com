@@ -6,7 +6,7 @@
   }
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: 576px) {
   .highlights {
     p, ul {
       font-size: 20px;
@@ -15,7 +15,7 @@
   }
 }
 
-@media screen and (min-width: $screen-md-min) {
+@media screen and (min-width: 768px) {
   .highlights {
     padding: 30px;
   }

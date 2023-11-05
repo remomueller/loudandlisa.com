@@ -2,7 +2,7 @@
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: 576px) {
   .voice-qualities {
     margin-bottom: 20px;
   }
@@ -11,13 +11,13 @@
   }
 }
 
-@media screen and (min-width: $screen-md-min) {
+@media screen and (min-width: 768px) {
   .voice-qualities {
     margin-bottom: 3rem;
   }
 }
 
-@media screen and (min-width: $screen-md-min) {
+@media screen and (min-width: 768px) {
   .home-1-text {
     margin-top: 40px;
   }
@@ -31,7 +31,7 @@
   }
 }
 
-@media screen and (min-width: $screen-lg-min) {
+@media screen and (min-width: 992px) {
   .home-1-text {
     margin-top: 40px;
   }

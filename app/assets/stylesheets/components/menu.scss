@@ -47,7 +47,7 @@ ul.menu-horizontal {
   }
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: 576px) {
   ul.menu-horizontal {
     padding-top: 20px;
     padding-bottom: 20px;

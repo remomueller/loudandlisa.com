@@ -63,3 +63,5 @@
 
 # OS generated files #
 .DS_Store
+
+/config/master.key

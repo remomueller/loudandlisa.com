@@ -3,34 +3,41 @@
 # rubocop:disable Layout/ExtraSpacing
 source "https://rubygems.org"
 
-gem "rails",                      "6.0.0.beta3"
+gem "rails",                      "6.1.4.4"
 
-# PostgreSQL as the Active Record database.
-gem "pg",                         "1.1.4"
+# Database Adapter
+gem "pg",                         "1.2.3"
 
 # Gems used by project.
 gem "autoprefixer-rails"
 gem "bootstrap-sass",             "~> 3.3.7"
-gem "carrierwave",                "~> 1.3.1"
-gem "devise",                     "~> 4.6.2"
-gem "figaro",                     "~> 1.1.1"
-gem "haml",                       "~> 5.0.4"
-gem "kaminari",                   "~> 1.1.1"
+gem "carrierwave",                "~> 2.2.1"
+gem "devise",                     "~> 4.8.0"
+gem "figaro",                     "~> 1.2.0"
+gem "haml",                       "~> 5.2.1"
+gem "kaminari",                   "~> 1.2.1"
 
 # Rails defaults.
-gem "coffee-rails",               "~> 4.2"
-gem "sass-rails",                 "~> 5.0"
+gem "coffee-rails",               "~> 5.0"
+gem "jbuilder",                   "~> 2.9"
+gem "jquery-rails",               ">= 4.4.0"
+gem "sass-rails",                 ">= 6"
+gem "turbolinks",                 "~> 5"
 gem "uglifier",                   ">= 1.3.0"
 
-gem "jbuilder",                   "~> 2.5"
-gem "jquery-rails",               "~> 4.3.3"
-gem "turbolinks",                 "~> 5"
-
 group :development do
-  gem "listen",                   ">= 3.0.5", "< 3.2"
+  gem "listen",                   "~> 3.3"
   gem "spring"
   gem "spring-watcher-listen",    "~> 2.0.0"
-  gem "web-console",              ">= 3.3.0"
+  gem "web-console",              ">= 4.1.0"
+end
+
+# Testing
+group :test do
+  # Pretty printed test output
+  gem "minitest"
+  gem "rails-controller-testing"
+  gem "simplecov",                "~> 0.16.1", require: false
 end
 
 group :test do
