@@ -31,6 +31,36 @@ class AdminControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get modern landing page as public user" do
+    get modern_url
+    assert_response :success
+    assert_select "nav a[href='#demos']"
+    assert_select "section#services"
+    assert_select "section#clients img[alt]", minimum: 20
+    assert_select "form[action='/contact#contact']"
+  end
+
+  test "should show thanks on modern landing page after sending" do
+    get modern_url(sent: 1)
+    assert_response :success
+    assert_select "form", count: 0
+    assert_select "h2", text: "Thanks for the note."
+  end
+
+  test "should submit modern contact and redirect back to modern page" do
+    post submit_contact_url, params: {
+      modern: "1", name: "Name", email: "test@example.com", body: "Line 1\nLine 2"
+    }
+    assert_redirected_to modern_path(sent: 1, anchor: "contact")
+  end
+
+  test "should not submit modern contact with missing fields" do
+    post submit_contact_url, params: { modern: "1", name: "", email: "", body: "" }
+    assert_response :success
+    assert_select "h1", text: /Lisa Mueller is a professional voiceover artist/
+    assert_select ".alert", text: "Please fill in all fields."
+  end
+
   test "should get version" do
     get version_url
     assert_response :success

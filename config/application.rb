@@ -19,5 +19,8 @@ module LoudAndLisa
     config.time_zone = "Eastern Time (US & Canada)"
 
     config.assets.js_compressor = :terser
+
+    # libsass cannot parse modern CSS (clamp(), min(), nesting), so serve CSS as written.
+    config.assets.css_compressor = nil
   end
 end

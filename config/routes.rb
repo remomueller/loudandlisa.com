@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get :demos
     get :services
     get :clients
+    get :modern
     get :contact
     post :submit_contact, path: "contact"
     get :version

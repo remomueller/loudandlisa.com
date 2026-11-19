@@ -1,0 +1,14 @@
+!!!
+%html{ lang: "en" }
+  %head
+    %meta{ charset: "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
+    %meta{ name: "description", content: "Lisa Mueller is a professional voiceover artist performing with passion and personality based near Boston and New York city. Lisa Mueller specializes in web commercials, direct response, narration, animation, jingles and explainer videos." }
+    %meta{ name: "author", content: "Lisa Mueller, Loud and Lisa Creative Services" }
+    %meta{ name: "theme-color", content: "#2A1226" }
+    %title Loud and Lisa Creative Services - Lisa Mueller - Female Voiceover Artist
+    = favicon_link_tag "loudandlisa.ico"
+    = csrf_meta_tags
+    = stylesheet_link_tag "modern", media: "all"
+  %body
+    = yield

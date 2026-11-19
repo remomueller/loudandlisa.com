@@ -1,0 +1,151 @@
+%a.skip-link{ href: "#main" } Skip to content
+
+%header.nav#top
+  .container.nav__inner
+    %a.nav__brand{ href: "#top", "aria-label": "Loud and Lisa Creative Services - back to top" }
+      = image_tag "loud-and-lisa-logo.png", alt: "Loud and Lisa Logo", width: 500, height: 145
+    %nav{ "aria-label": "Sections" }
+      %ul.nav__links
+        %li= link_to "Demos", "#demos"
+        %li= link_to "Services", "#services"
+        %li= link_to "Clients", "#clients"
+        %li= link_to "Contact", "#contact", class: "nav__cta"
+
+%main#main
+  -# Intro
+  %section.hero
+    .container.grid
+      .hero__copy
+        %p.eyebrow.rise.d1 Voiceover artist
+        %h1.rise.d2
+          %span.name Lisa Mueller
+          is a professional voiceover artist offering a versatile sound:
+        %ul.qualities.rise.d3
+          %li Smooth
+          %li Warm
+          %li All-American
+          %li Dynamic
+          %li Peppy
+          %li Flirty
+        %p.rise.d4
+          %a.btn{ href: "#contact" }
+            %span
+              %span.hide-mobile Let's work together
+              %span.show-mobile Let's talk
+            = modern_icon :arrow, size: 20
+      .hero__media.rise.d3
+        = image_tag "headshots/lisa-home.jpg", alt: "Lisa Mueller", width: 472, height: 719
+
+  -# Demos
+  %section.section.section--dark#demos
+    .container.grid
+      .demos__intro.reveal
+        %p.eyebrow
+          %span.eyebrow__num 01
+          Demos
+        %h2 Demos
+      %ol.tracks.reveal
+        - [["Voiceover Demo", "lisa-mueller-vo-demo-2023.mp3"], ["Commercial Sample", "lisa-mueller-commercial-sample.mp3"], ["Testimonial Sample", "lisa-mueller-testimonial-sample.mp3"], ["Non-Profit Sample", "lisa-mueller-non-profit-sample.mp3"], ["Character Sample", "lisa-mueller-character-sample.mp3"]].each_with_index do |(title, file), index|
+          %li.track
+            %span.track__num= format("%02d", index + 1)
+            %h3.track__title= title
+            %audio{ controls: true, preload: "none", "aria-label": title }
+              %source{ src: asset_path(file), type: "audio/mpeg" }
+              Your browser does not support the audio element.
+
+  -# Services
+  %section.section.services#services
+    .container.grid
+      .services__media.reveal
+        = image_tag "headshots/lisa-services.jpg", alt: "Lisa Mueller - Services", width: 472, height: 719, loading: "lazy"
+      .services__copy
+        %p.eyebrow.reveal
+          %span.eyebrow__num 02
+          Services
+        %p.lead.reveal
+          Lisa specializes in TV and web commercials, direct response, narration,
+          animation, jingles, e-learning, and explainer videos.
+        %p.reveal
+          She connects with clients to determine the tone of the desired read and
+          executes projects with precision to quickly deliver fully-edited files
+          in any format required.
+        %ul.features.reveal
+          - [[:mic, "Home Studio"], [:tag, "Flexible Non-Union Rates"], [:wave, "Audio Editing"], [:pen, "Copywriting"], [:download, "Digital File Delivery"], [:clock, "24-48 Hour Turnaround"]].each do |icon, label|
+            %li
+              %span.features__icon= modern_icon icon
+              %strong= label
+        %p.reveal
+          %a.btn{ href: "#contact" }
+            %span
+              Get a quote
+              %span.hide-mobile today
+            = modern_icon :arrow, size: 20
+
+  -# Clients
+  %section.section.section--blush.clients#clients
+    .container.grid
+      .clients__list
+        %p.eyebrow.reveal
+          %span.eyebrow__num 03
+          Clients
+        %h2.reveal Clients
+        %ul.logos.reveal
+          - @logos.each do |logo|
+            %li= image_tag "clients/#{logo}", alt: client_logo_name(logo), width: 256, height: 256, loading: "lazy"
+      .clients__media.reveal
+        = image_tag "headshots/lisa-demo.jpg", alt: "", width: 472, height: 719, loading: "lazy"
+
+  -# Contact
+  %section.section.section--dark.contact#contact
+    .container.grid
+      .contact__intro.reveal
+        %p.eyebrow
+          %span.eyebrow__num 04
+          Contact
+        - if @sent
+          %h2 Thanks for the note.
+          %p.lead We'll be in touch soon!
+          = image_tag "headshots/lisa-contact.jpg", alt: "Lisa Mueller holding a Thanks! sign", class: "contact__thanks", width: 472, height: 719, loading: "lazy"
+        - else
+          %h2
+            Want a custom audition or project quote?
+            %br
+            Let's talk!
+      - unless @sent
+        .contact__form.reveal
+          = form_tag "#{submit_contact_path}#contact", method: :post do
+            = hidden_field_tag :modern, 1
+            - if @form_error
+              %p.alert{ role: "alert" } Please fill in all fields.
+            .field
+              = label_tag :name, "Name"
+              = text_field_tag :name, params[:name], autocomplete: "name"
+            .field
+              = label_tag :email, "Email"
+              = email_field_tag :email, params[:email], autocomplete: "email"
+            .field
+              = label_tag :body, "Message"
+              = text_area_tag :body, params[:body], rows: 6
+            - if RECAPTCHA_ENABLED
+              %script{ src: "https://www.google.com/recaptcha/api.js?render=#{ENV["recaptcha_site_key"]}" }
+              = hidden_field_tag :recaptcha_token
+              :javascript
+                grecaptcha.ready(function() {
+                  grecaptcha.execute("#{ENV["recaptcha_site_key"]}", {action: "contact"}).then(function(token) {
+                    document.getElementById("recaptcha_token").value = token;
+                  });
+                });
+            %button.btn.btn--accent{ type: "submit" }
+              Send message
+              = modern_icon :arrow, size: 20
+
+%footer.footer
+  .container.footer__inner
+    %p
+      Represented by AWA
+      %a{ href: "tel:617-816-1020" }
+        = modern_icon :phone, size: 16
+        617-816-1020
+    %p
+      Loud and Lisa &copy;
+      = Date.today.year

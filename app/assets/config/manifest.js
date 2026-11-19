@@ -3,3 +3,4 @@
 //= link_tree ../fonts
 //= link application.js
 //= link application.css
+//= link modern.css

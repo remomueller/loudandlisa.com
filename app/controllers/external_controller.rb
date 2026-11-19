@@ -15,7 +15,45 @@ class ExternalController < ApplicationController
 
   # GET /clients
   def clients
-    @logos = %w(
+    @logos = client_logos
+  end
+
+  # GET /modern
+  def modern
+    @logos = client_logos
+    @sent = params[:sent].present?
+    render layout: "modern"
+  end
+
+  # # GET /contact
+  # def contact
+  # end
+
+  # POST /contact
+  def submit_contact
+    modern = params[:modern].present?
+
+    if params[:name].present? && params[:email].present? && params[:body].present? && verify_recaptcha
+      UserMailer.contact(params[:name], params[:email], params[:body]).deliver_now if EMAILS_ENABLED
+      redirect_to modern ? modern_path(sent: 1, anchor: "contact") : thanks_path
+    elsif modern
+      @logos = client_logos
+      @form_error = true
+      render :modern, layout: "modern"
+    else
+      render :contact
+    end
+  end
+
+  # # GET /version
+  # # GET /version.json
+  # def version
+  # end
+
+  private
+
+  def client_logos
+    %w(
       dunkin-logo.jpg
       johnson-and-johnson-logo.jpg
       fanatics-logo.png
@@ -38,27 +76,6 @@ class ExternalController < ApplicationController
       ymca-logo.jpg
     )
   end
-
-  # # GET /contact
-  # def contact
-  # end
-
-  # POST /contact
-  def submit_contact
-    if params[:name].present? && params[:email].present? && params[:body].present? && verify_recaptcha
-      UserMailer.contact(params[:name], params[:email], params[:body]).deliver_now if EMAILS_ENABLED
-      redirect_to thanks_path
-    else
-      render :contact
-    end
-  end
-
-  # # GET /version
-  # # GET /version.json
-  # def version
-  # end
-
-  private
 
   def verify_recaptcha
     return true unless RECAPTCHA_ENABLED
