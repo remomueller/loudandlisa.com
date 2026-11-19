@@ -5,6 +5,6 @@
     .hidden-sm.hidden-md= render "layouts/menu"
 
     .text-center{ style: "padding: 1rem 0;" }
-      - @logos.each_with_index do |logo, index|
-        .client-logo{ class: @logos.size - 1 == index ? "client-logo-last" : nil }
+      - @logos.each do |logo|
+        .client-logo
           = image_tag "clients/#{logo}"

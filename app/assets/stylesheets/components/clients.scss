@@ -8,13 +8,3 @@
     width: 96px;
   }
 }
-
-.client-logo-last {
-  display: inline;
-}
-
-@media screen and (min-width: $screen-xs-min) {
-  .client-logo-last {
-    display: none;
-  }
-}
