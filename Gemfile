@@ -1,44 +1,34 @@
 # frozen_string_literal: true
 
-# rubocop:disable Layout/ExtraSpacing
 source "https://rubygems.org"
 
-gem "rails",                      "6.1.4.4"
+gem "rails", "~> 8.1.0"
 
-# Database Adapter
-gem "pg",                         "1.2.3"
-
-# Gems used by project.
+# Asset pipeline
+gem "sprockets-rails"
+gem "sassc-rails"
+gem "terser"
 gem "autoprefixer-rails"
-gem "bootstrap-sass",             "~> 3.3.7"
-gem "carrierwave",                "~> 2.2.1"
-gem "devise",                     "~> 4.8.0"
-gem "figaro",                     "~> 1.2.0"
-gem "haml",                       "~> 5.2.1"
-gem "kaminari",                   "~> 1.2.1"
+gem "bootstrap-sass", "~> 3.4.1"
+gem "jquery-rails"
+gem "turbolinks", "~> 5"
 
-# Rails defaults.
-gem "coffee-rails",               "~> 5.0"
-gem "jbuilder",                   "~> 2.9"
-gem "jquery-rails",               ">= 4.4.0"
-gem "sass-rails",                 ">= 6"
-gem "sassc",                      "2.1.0"
-gem "turbolinks",                 "~> 5"
-gem "uglifier",                   ">= 1.3.0"
+# Views
+gem "haml"
+gem "jbuilder"
+
+# Configuration and server
+gem "figaro"
+gem "puma"
 
 group :development do
-  gem "listen",                   "~> 3.3"
-  gem "spring"
-  gem "spring-watcher-listen",    "~> 2.0.0"
-  gem "web-console",              ">= 4.1.0"
+  gem "web-console"
 end
 
-# Testing
 group :test do
-  gem "capybara",                 ">= 2.15", "< 4.0"
-  gem "minitest"
-  gem "puma"
+  gem "capybara"
   gem "selenium-webdriver"
-  gem "simplecov",                "~> 0.16.1", require: false
+  gem "minitest"
+  gem "rails-controller-testing"
+  gem "simplecov", require: false
 end
-# rubocop:enable Layout/ExtraSpacing

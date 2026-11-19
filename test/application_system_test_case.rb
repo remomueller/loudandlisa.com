@@ -2,6 +2,18 @@
 
 require "test_helper"
 
+# Capybara 3.40 resets Chrome with the DevTools command Storage.clearDataForOrigin
+# using origin "*", which current Chrome rejects ("* is not a valid URL").
+# Clear cookies directly instead.
+module ChromeResetStorageFix
+  def execute_cdp(command, params = {})
+    return browser.manage.delete_all_cookies if command == "Storage.clearDataForOrigin"
+
+    super
+  end
+end
+Capybara::Selenium::Driver::ChromeDriver.prepend(ChromeResetStorageFix)
+
 # Set up ApplicationSystemTestCase system tests.
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   driven_by :selenium, using: :chrome, screen_size: [1400, 1400]

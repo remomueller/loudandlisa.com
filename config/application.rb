@@ -2,31 +2,22 @@
 
 require_relative "boot"
 
-require "rails/all"
+require "rails"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "action_view/railtie"
+require "sprockets/railtie"
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module LoudAndLisa
   # Application that hosts Loud and Lisa website.
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 8.1
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
-
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rails time:zones" for a list of tasks for finding time zone names. Default is UTC.
+    # Set Time.zone default to the specified zone.
     config.time_zone = "Eastern Time (US & Canada)"
 
-    # Ignores custom error DOM elements created by Rails.
-    config.action_view.field_error_proc = proc { |html_tag, _instance| html_tag }
+    config.assets.js_compressor = :terser
   end
 end
